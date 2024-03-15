@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Hairline&family=Kode+Mono:wght@400..700&family=Ojuju:wght@200..800&family=Silkscreen:wght@400;700&display=swap');
+
+* {
+
+    background-color: #191A19;
+    text-decoration: none;
+    color: white;
+    line-height: 150%;
+}
+
+body {
+    height: 100vh;
+}
+
+.cabecalho {
+    padding: 2% 0% 0% 2%; 
+}
+
+.cabecalho__imagem__ONE {
+    width: 6.25rem;
+}
+
+.cabecalho__imagem__Alura {
+    width: 6.25rem;
+}
+
+.apresentacao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.apresentacao__conteudo {
+    box-sizing: border-box;
+    height: 70%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.apresentacao__conteudo__introducao {
+    display: flex;
+    justify-content: center;
+    font-family: "Silkscreen", sans-serif;
+    font-weight: 400;
+    gap: 8px;
+}
+
+.apresentacao__conteudo__texto {
+    padding: 1% 30% 1% 30% ;
+    margin: 0px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    font-family: "Ojuju", sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.decodificadorPag {
+    display: flex;
+    margin-bottom: 50px;
+    margin-left: 80px;
+}
+
+.text-area {
+    border: none;
+    color: #1E5128;
+    margin-top: 90px;
+    text-transform: lowercase;
+}
+
+::placeholder { color: #1E5128;}
+    .text-area:focus {
+        outline: none;
+    }
+
+.mensagem {
+    background: white;
+    background-image: url();
+    background-repeat: none;
+    border: none;
+    border-radius: 24px;
+    color: #1E5128;
+    margin-left: 98px;
+    margin-top: 20px;
+    padding-left: 20px;
+}
+.mensagem:focus {
+    outline: none;
+}
+
+.botoes {
+    display: flex;
+    margin-top: 18px;
+}
+
+.desencriptar {
+    background-color: #191A19;
+    border: 1px solid #1E5128;
+    border-radius: 24px;
+    color: #1E5128;
+    cursor: pointer;
+    height: 40px;
+    margin-left: 30px;
+    width: 328px;
+}
+
+.encriptar {
+    background-color: #1E5128;
+    border: 1px solid #1E5128;
+    border-radius: 24px;
+    color: white;
+    cursor: pointer;
+    height: 40px;
+    width: 328px;
+}
+
+.copiar {
+    border: 1px solid #1E5128;
+    border-radius: 24px;
+    color: #1E5128;
+    cursor: pointer;
+    height: 40px;
+    margin-left: 50px;
+    margin-top: 100px;
+    width: 336px;
+}
+
+.tela__Mensagem {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.rodape {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    color: black;
+    text-align: center;
+    width: 100%;
+    height: 50px;
+    position: sticky;
+    bottom: 0;
+    margin-top: 30%;
+    font-size: 16px;
+    font-family: "Kode Mono", monospace;
+    font-weight: 400;
+}
+
