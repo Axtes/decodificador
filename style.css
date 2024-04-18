@@ -1,40 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Kode+Mono:wght@400..700&family=Pixelify+Sans:wght@400..700&family=Silkscreen:wght@400;700&display=swap');
 
-* {
-
-    background-color: #191A19;
-    text-decoration: none;
-    color: white;
-    line-height: 150%;
+:root {
+    --cor-primaria: #03ff039c;
+    --cor-secundaria: #393e468e;
+    --cor-terciaria: #EEEEEE;
+    --fonte-primaria: "Kode Mono", "sans-serif";
 }
 
-body {
-    height: 100vh;
+.estilo {
+    z-index: -1;
+}
+
+* {
+    padding: 0%;
+    margin: 0%;
+    text-decoration: none;
+    color: white;
 }
 
 .cabecalho {
-    padding: 2% 0% 0% 2%; 
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    background-color: var(--cor-primaria);
+    padding: 1% 1% 1% 1%;
 }
 
-.cabecalho__imagem__ONE {
+.cabecalho__imagem__ONE { 
+    filter: saturate(150%) brightness(115%);
     width: 6.25rem;
 }
 
-.cabecalho__imagem__Alura {
+.cabecalho__imagem__Alura { 
+    filter: saturate(150%);
     width: 6.25rem;
 }
 
 .apresentacao {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    justify-content: space-between;
+    display: flex; 
+    min-height: 100vh;
 }
 
 .apresentacao__conteudo {
-    box-sizing: border-box;
-    height: 70%;
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -43,64 +49,73 @@ body {
 .apresentacao__conteudo__introducao {
     display: flex;
     justify-content: center;
-    font-family: "Silkscreen", sans-serif;
+    font-family: var(--fonte-primaria);
     font-weight: 400;
     gap: 8px;
 }
 
 .apresentacao__conteudo__texto {
-    padding: 1% 30% 1% 30% ;
+    padding: 1% 20% 1% 20% ;
     margin: 0px;
     display: flex;
     text-align: center;
     justify-content: center;
-    font-family: "Pixelify Sans", sans-serif;
+    font-family: var(--fonte-primaria);
     font-size: 20px;
     font-weight: 600;
 }
 
-.decodificadorPag {
+.rayquaza__imagem {
     display: flex;
-    margin-bottom: 50px;
-    margin-left: 80px;
+    justify-content: center;
+    width: 30%;
+    margin-left: 35%;
+}
+
+.decodificadorPag {
+    justify-content: space-evenly;
+    display: flex; 
+    min-height: 100vh
 }
 
 .text-area {
-    color: #1E5128;
+    background-color: var(--cor-secundaria);
     margin-top: 90px;
+    border-radius: 3px;
+    color: var(--cor-primaria);
     text-transform: lowercase;
 }
 
-::placeholder { color: #1E5128;}
+::placeholder { color: var(--cor-primaria);}
     .text-area:focus {
         outline: none;
     }
 
 .mensagem {
-    background: white;
-    background-image: url();
-    background-repeat: none;
-    border: none;
-    border-radius: 24px;
-    color: #1E5128;
-    margin-left: 98px;
-    margin-top: 20px;
-    padding-left: 20px;
+    background-color: var(--cor-secundaria);
+    border-radius: 3px;
 }
 .mensagem:focus {
     outline: none;
 }
 
+.informacao {
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
 .botoes {
     display: flex;
     margin-top: 18px;
+    justify-content: center;
 }
 
 .desencriptar {
-    background-color: #191A19;
-    border: 1px solid #1E5128;
-    border-radius: 24px;
-    color: #1E5128;
+    background: none;
+    border: 1px solid var(--cor-primaria);
+    border-radius: 3px;
+    color: var(--cor-primaria);
     cursor: pointer;
     height: 40px;
     margin-left: 30px;
@@ -108,9 +123,9 @@ body {
 }
 
 .encriptar {
-    background-color: #1E5128;
-    border: 1px solid #1E5128;
-    border-radius: 24px;
+    background-color: var(--cor-primaria);
+    border: 1px solid var(--cor-primaria);
+    border-radius: 3px;
     color: white;
     cursor: pointer;
     height: 40px;
@@ -118,36 +133,87 @@ body {
 }
 
 .copiar {
-    border: 1px solid #1E5128;
-    border-radius: 24px;
-    color: #1E5128;
+    background: none;
+    border: 1px solid var(--cor-primaria);
+    border-radius: 3px;
+    color: var(--cor-primaria);
     cursor: pointer;
     height: 40px;
-    margin-left: 100px;
-    margin-top: -40px;
+    margin-top: -45px;
     width: 336px;
 }
 
 .tela__Mensagem {
+    margin-top: -300px;
     display: flex;
     justify-content: center;
     flex-direction: column;
     align-items: center;
+
 }
 
 .rodape {
+    background-color: var(--cor-primaria);
     display: flex;
     justify-content: center;
-    align-items: center;    
-    color: black;
-    text-align: center;
-    width: 100%;
-    height: 50px;
-    position: sticky;
-    bottom: 0;
-    margin-top: 30%;
-    font-size: 16px;
-    font-family: "Kode Mono", monospace;
-    font-weight: 400;
+    
 }
 
+.rodape__informacoes {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    font-family: var(--fonte-primaria);
+    font-weight: 400;
+    color: black;
+    text-align: center;
+    padding: 5px;
+}
+
+@media (max-width: 1366px) and (max-height: 768px) {
+    .tela__Mensagem {
+        margin-top: -25px;
+    }
+
+    .cabecalho__imagem__ONE { 
+        filter: brightness(100%);
+
+    }
+} 
+
+@media (max-width: 1024px) and (max-height: 768px) {
+    .decodificadorPag {
+        margin: 0%;
+        padding: 0%;
+        justify-content: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text-area {
+        width: 30%;
+        margin-left: 360px;
+    }
+
+    .mensagem {
+        width: 70%;
+    }
+
+    .botoes {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .desencriptar {
+        margin: 0%;
+        padding: 0%;
+    }
+
+    .encriptar {
+        margin: 0%;
+        padding: 0%;
+    }
+}

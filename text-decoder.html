@@ -18,25 +18,29 @@
     </header>
     <main class="decodificadorPag">
         <section>
-            <textarea class="text-area" cols="100" rows="25" placeholder="Digite seu Texto"></textarea>
+            <textarea class="text-area" cols="110" rows="25" placeholder="Digite seu Texto"></textarea>
             <div class="informacao">
                 <h6>Apenas letras minúsculas e sem acento.</h6>
             </div>
 
             <div class="botoes">
-                <button class="encriptar">Criptografar</button>
-                <button class="desencriptar">Descriptografar</button>
+                <button class="encriptar" onclick="btnEncriptar()">Criptografar</button>
+                <button class="desencriptar" onclick="btnDesencriptar()">Descriptografar</button>
             </div>
         </section>
 
         <section class="tela__Mensagem">
-            <textarea class="mensagem" cols="50" rows="30"></textarea>
-            <button class="copiar">Copiar</button>
+            <textarea class="mensagem" cols="60" rows="30"></textarea>
+            <button class="copiar" onclick="copiarTexto()">Copiar</button>
         </section>
     </main>
+    <canvas class="estilo" style="position: fixed; top: 0"></canvas>
     <footer class="rodape">
-        <img class="github__icone" src="assets/github_icon.png" alt="GitHub-icone">
-        <p>Desenvolvido por Axtes!</p>
-    </footer>    
+        <section class="rodape__informacoes">
+        <img class="github_icone" src="assets/github_icon.png" alt="GitHub-icone">
+        <p>Desenvolvido por Axtes</p>
+    </section>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>
