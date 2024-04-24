@@ -14,8 +14,21 @@
 * {
     padding: 0%;
     margin: 0%;
+    box-sizing: border-box;
     text-decoration: none;
     color: white;
+}
+
+.cabecalho__menu {
+    display: flex;
+    gap: 14px;
+}
+
+.cabecalho__menu__link {
+    border-radius: 2px;
+    border: 2px solid var(--cor-terciaria);
+} .cabecalho__menu__link:hover {
+    filter: saturate(150%);
 }
 
 .cabecalho {
@@ -44,6 +57,7 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 }
 
 .apresentacao__conteudo__introducao {
@@ -51,7 +65,7 @@
     justify-content: center;
     font-family: var(--fonte-primaria);
     font-weight: 400;
-    gap: 8px;
+    font-size: 1.56rem;
 }
 
 .apresentacao__conteudo__texto {
@@ -61,7 +75,7 @@
     text-align: center;
     justify-content: center;
     font-family: var(--fonte-primaria);
-    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: 600;
 }
 
@@ -69,7 +83,6 @@
     display: flex;
     justify-content: center;
     width: 30%;
-    margin-left: 35%;
 }
 
 .decodificadorPag {
@@ -78,9 +91,18 @@
     min-height: 100vh
 }
 
+.deco__pag__textos {
+    display: flex;
+    margin-top: 100px;
+    gap: 30px;
+}
+
 .text-area {
+    width: 800px;
+    height: 400px;
+    font-weight: 400;
+    font-family: var(--fonte-primaria);
     background-color: var(--cor-secundaria);
-    margin-top: 90px;
     border-radius: 3px;
     color: var(--cor-primaria);
     text-transform: lowercase;
@@ -92,6 +114,10 @@
     }
 
 .mensagem {
+    width: 800px;
+    height: 400px;
+    font-weight: 400;
+    font-family: var(--fonte-primaria);
     background-color: var(--cor-secundaria);
     border-radius: 3px;
 }
@@ -100,29 +126,35 @@
 }
 
 .informacao {
+    font-size: 0.75rem;
+    font-weight: 400;
+    font-family: var(--fonte-primaria);
     display: flex;
     justify-content: center;
-    font-size: 20px;
 }
 
 .botoes {
     display: flex;
     margin-top: 18px;
     justify-content: center;
+    gap: 20px;
 }
 
 .desencriptar {
+    font-weight: 400;
+    font-family: var(--fonte-primaria);
     background: none;
     border: 1px solid var(--cor-primaria);
     border-radius: 3px;
     color: var(--cor-primaria);
     cursor: pointer;
     height: 40px;
-    margin-left: 30px;
     width: 328px;
-}
+} 
 
 .encriptar {
+    font-weight: 400;
+    font-family: var(--fonte-primaria);
     background-color: var(--cor-primaria);
     border: 1px solid var(--cor-primaria);
     border-radius: 3px;
@@ -130,27 +162,19 @@
     cursor: pointer;
     height: 40px;
     width: 328px;
-}
+} 
 
 .copiar {
-    background: none;
+    font-weight: 400;
+    font-family: var(--fonte-primaria);
+    background-color: var(--cor-secundaria);
     border: 1px solid var(--cor-primaria);
     border-radius: 3px;
     color: var(--cor-primaria);
     cursor: pointer;
     height: 40px;
-    margin-top: -45px;
-    width: 336px;
-}
-
-.tela__Mensagem {
-    margin-top: -300px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-
-}
+    width: 328px;
+} 
 
 .rodape {
     background-color: var(--cor-primaria);
@@ -170,9 +194,19 @@
     padding: 5px;
 }
 
-@media (max-width: 1366px) and (max-height: 768px) {
-    .tela__Mensagem {
-        margin-top: -25px;
+@media (max-width: 1360px) and (max-height: 768px) {
+    * {
+        padding: 0%;
+        margin: 0%;
+    }
+    .text-area {
+        width: 600px;
+        height: 350px;
+    }
+
+    .mensagem {
+        width: 600px;
+        height: 350px;
     }
 
     .cabecalho__imagem__ONE { 
@@ -181,39 +215,94 @@
     }
 } 
 
-@media (max-width: 1024px) and (max-height: 768px) {
-    .decodificadorPag {
-        margin: 0%;
+@media (max-width: 768px) and (max-height: 1384px) {
+    * {
         padding: 0%;
-        justify-content: center;
+        margin: 0%;
+    }
+
+    .decodificadorPag {
         display: flex;
+        justify-content: center;
+    }
+
+    .deco__pag__textos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .botoes {
         flex-direction: column;
         align-items: center;
     }
 
     .text-area {
-        width: 30%;
-        margin-left: 360px;
+        width: 600px;
+        height: 300px;
     }
 
     .mensagem {
-        width: 70%;
+        width: 600px;
+        height:300px;
+    }
+}
+
+@media (max-width: 375px) and (max-height: 1715px) {
+    * {
+        padding: 0%;
+        margin: 0%;
+    }
+
+    .apresentacao__conteudo__introducao {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .apresentacao__conteudo__texto {
+        margin-top: 20px;
+    }
+
+    .decodificadorPag {
+        display: flex;
+        justify-content: center;
+    }
+
+    .rayquaza__imagem {
+        width: 65%;
+    }
+
+    .deco__pag__textos {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .text-area {
+        width: 300px;
+        height: 450px;
     }
 
     .botoes {
-        flex-direction: column;
-        justify-content: center;
+        display: flex;
         align-items: center;
+        justify-content: center;
         gap: 10px;
     }
 
-    .desencriptar {
-        margin: 0%;
-        padding: 0%;
+    .encriptar {
+        width: 35%;
     }
 
-    .encriptar {
-        margin: 0%;
-        padding: 0%;
+    .desencriptar {
+        width: 122px;
+    }
+
+    .copiar {
+        width: 35%;
+    }
+
+    .mensagem {
+        width: 300px;
+        height: 450px;
     }
 }
