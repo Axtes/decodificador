@@ -77,5 +77,3 @@ const draw = () => {
 }
 
 setInterval(draw, 20);
-
-window.addEventListener("resize", () => location.reload());
