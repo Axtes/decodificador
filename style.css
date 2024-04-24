@@ -27,9 +27,7 @@
 .cabecalho__menu__link {
     border-radius: 2px;
     border: 2px solid var(--cor-terciaria);
-} .cabecalho__menu__link:hover {
-    filter: saturate(150%);
-}
+} 
 
 .cabecalho {
     font-family: var(--fonte-primaria);
@@ -49,7 +47,8 @@
 }
 
 .apresentacao {
-    display: flex; 
+    display: flex;
+    flex: 1 1 0;
     min-height: 100vh;
 }
 
@@ -86,9 +85,11 @@
 }
 
 .decodificadorPag {
+    flex: 1 1 0;
     justify-content: space-evenly;
     display: flex; 
-    min-height: 100vh
+    min-height: 100vh;
+
 }
 
 .deco__pag__textos {
@@ -98,8 +99,8 @@
 }
 
 .text-area {
-    width: 800px;
-    height: 400px;
+    width: 800px auto;
+    height: 400px auto;
     font-weight: 400;
     font-family: var(--fonte-primaria);
     background-color: var(--cor-secundaria);
@@ -114,8 +115,8 @@
     }
 
 .mensagem {
-    width: 800px;
-    height: 400px;
+    width: 800px auto;
+    height: 400px auto;
     font-weight: 400;
     font-family: var(--fonte-primaria);
     background-color: var(--cor-secundaria);
@@ -138,6 +139,7 @@
     margin-top: 18px;
     justify-content: center;
     gap: 20px;
+    
 }
 
 .desencriptar {
@@ -162,6 +164,7 @@
     cursor: pointer;
     height: 40px;
     width: 328px;
+
 } 
 
 .copiar {
@@ -180,13 +183,13 @@
     background-color: var(--cor-primaria);
     display: flex;
     justify-content: center;
-    
+    width: 100%;
 }
 
 .rodape__informacoes {
     display: flex;
     align-items: center;
-    font-size: 16px;
+    font-size: 1rem;
     font-family: var(--fonte-primaria);
     font-weight: 400;
     color: black;
@@ -194,7 +197,83 @@
     padding: 5px;
 }
 
-@media (max-width: 1360px) and (max-height: 768px) {
+@keyframes crescer {
+    0% {
+        transform: scale(1);
+    }
+
+    100% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes encolher {
+    0% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+} 
+
+.encriptar:hover {
+    transition: all 0.5s;
+    animation-name: crescer ;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+
+} .encriptar:not(:hover) {
+    animation-name: encolher;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.desencriptar:hover {
+    transition: all 0.5s;
+    animation-name: crescer ;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+
+} .desencriptar:not(:hover) {
+    animation-name: encolher;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.copiar:hover {
+    transition: all 0.5s;
+    animation-name: crescer ;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+
+} .copiar:not(:hover) {
+    animation-name: encolher;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+.cabecalho__menu__link:hover {
+    transition: all 0.5s;
+    animation-name: crescer ;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+
+} .cabecalho__menu__link:not(:hover) {
+    animation-name: encolher;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-fill-mode: forwards;
+}
+
+@media screen and (min-width: 1360px) and (max-width: 1980px)  {
     * {
         padding: 0%;
         margin: 0%;
@@ -215,7 +294,7 @@
     }
 } 
 
-@media (max-width: 768px) and (max-height: 1384px) {
+@media screen and (min-width: 828px) and (max-width: 1359px) {
     * {
         padding: 0%;
         margin: 0%;
@@ -229,6 +308,10 @@
     .deco__pag__textos {
         flex-direction: column;
         align-items: center;
+    }
+
+    .rayquaza__imagem {
+        width: 30%;
     }
 
     .botoes {
@@ -247,7 +330,7 @@
     }
 }
 
-@media (max-width: 375px) and (max-height: 1715px) {
+@media screen and (min-width: 375px) and (max-width: 828px) {
     * {
         padding: 0%;
         margin: 0%;
