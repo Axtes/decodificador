@@ -78,4 +78,10 @@ const draw = () => {
 
 setInterval(draw, 20);
 
-window.addEventListener("resize", () => {});
+window.addEventListener("resize", () => {
+    const elemento = document.getElementById("estilizacao");
+    elemento.style.height = window.innerHeight + "px";
+    elemento.style.width = window.innerWidth + "px";
+});
+
+window.dispatchEvent(new Event('resize'));
